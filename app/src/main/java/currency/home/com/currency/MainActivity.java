@@ -11,7 +11,7 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity {
 
     private EditText ntd;
-    private Button bnt_go;
+    private Button btnGo;
     private double NTD,USD;
 
     @Override
@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void findViews() {
         ntd = findViewById(R.id.ntd);
-        bnt_go = findViewById(R.id.btn_go);
-        bnt_go.setOnClickListener(new View.OnClickListener() {
+        btnGo = findViewById(R.id.btnGo);
+        btnGo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if("".equals(ntd.getText().toString())){
