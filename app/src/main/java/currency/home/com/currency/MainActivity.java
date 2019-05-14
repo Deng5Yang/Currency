@@ -31,17 +31,17 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if("".equals(ntd.getText().toString())){
                     new AlertDialog.Builder(MainActivity.this)
-                            .setTitle("Problem")
-                            .setMessage("Please Enter Your NTD Amount!!!")
-                            .setPositiveButton("OK",null)
+                            .setTitle(R.string.problem)
+                            .setMessage(R.string.please_enter_ntd)
+                            .setPositiveButton(R.string.ok,null)
                             .show();
                 }else{
                     NTD = Double.parseDouble(ntd.getText().toString());
                     USD = NTD / 30.9;
                     new AlertDialog.Builder(MainActivity.this)
-                            .setTitle("Result")
-                            .setMessage("USD is" + USD)
-                            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            .setTitle(R.string.result)
+                            .setMessage(getString(R.string.usd_is) + USD)
+                            .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
                                     ntd.setText("");
